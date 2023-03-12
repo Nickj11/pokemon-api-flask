@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h1 class="fw-bold mb-2 text-uppercase">Sign Up</h1>
+                <p>Fill out all the forms</p>
+  
+                <div class="form-outline form-white mb-4">
+                    <form method="POST">
+                  
+        {{ form.hidden_tag() }}
+
+        {{ form.username(class='form-control', placeholder = 'Username') }}
+        {{ form.name(class='form-control', placeholder = 'Name') }}
+        {{ form.email(class='form-control', placeholder = 'Email') }}
+        {{ form.password(class='form-control', placeholder = 'Password') }}
+        {{ form.confirm_password(class='form-control', placeholder = 'Confirm Password') }}
+
+  
+                <div class="btn btn-  ">
+                    {{ form.submit(class='btn btn-light') }}
+                    </div>
+  
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {%endblock%}
+

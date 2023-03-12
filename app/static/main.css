@@ -1,0 +1,49 @@
+h1 {
+    color: rgb(239, 239, 127);
+    outline: aliceblue;
+}
+body{
+   background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+}
+li a{
+    color: aliceblue;
+}
+#nav-item{
+    color: aliceblue;
+}
+
+ul{
+  
+cursor: pointer;
+float: left;
+height: 87px;
+margin: 0;
+overflow: visible;
+position: relative;
+width: 14.28571%;
+}
+*html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.catch{
+height: auto;
+width: 280px;
+}
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+.collapse ul.navbar-nav>li>a {
+    color: red;
+}
+

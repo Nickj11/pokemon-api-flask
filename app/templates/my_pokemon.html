@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="row text-center my-5 text-white">
+    <h1>{{current_user.username}}'s Pokemon</h1>
+</div>
+
+<div class="row my-5 d-flex justify-content-center text-white">
+    {% for poke in my_pokemon %}
+    <div class="col my-2 d=flex justify-content-center text-center">
+        <div class="my_pokemon"><img src='{{ poke.img }}'></div>
+        <p class="get_pokemon">{{ poke.pokename.title() }}</p>
+    </div>
+    <br>
+    {%endfor%}
+<div class="row my-5 d-flex justify-content-center text-center text-danger-emphasis">
+    <h3>Choose Your Opponent</h3>
+    {% for user in users %}
+    {% if user.id != current_user.id %}
+        <a href="{{url_for('battleUser', user_id=user.id)}}" class="col my-5 text-center text-danger-emphasis text-decoration-none">{{user.username}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+</div>
+
+
+{%endblock%}

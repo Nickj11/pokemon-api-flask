@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="row d-flex justify-content-center text-center my-5 text-white">
+    <img class="col-5" src="https://www.pngarts.com/files/3/Pokemon-Logo-PNG-Image.png"/>
+</div>
+
+<div class="row my-5 d-flex justify-content-center text-white">
+    <form method="POST" class="col-8">
+
+        {{ poke.hidden_tag() }}
+
+        {{ poke.choose(class='form-control', placeholder = 'Choose Your Pokemon') }}
+
+        <div class="d-flex my-2 justify-content-center">
+            {{ poke.submit(class='btn btn-success') }}
+        </div>
+        <br>
+        {% if pokemon_dict %}
+        <div class="text-center">
+            <img src="{{pokemon_dict['Front Shiny']}}">
+            <p>Name: {{ pokemon_dict["Name"] }}</p>
+            <p>Ability: {{pokemon_dict["Ability"]}}</p>
+            <p>Base XP: {{pokemon_dict["Base xp"]}}</p>
+            <p>Base HP: {{pokemon_dict["Base hp"]}}</p>
+            <p>Base Attack: {{pokemon_dict["Base attack"]}}</p>
+            <p>Base Defense: {{pokemon_dict["Base d"]}}</p>
+            <br>
+        </div>
+        <br>
+        {% endif %}
+    </form>
+</div>
+
+</div>
+
+{%endblock%}
